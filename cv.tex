@@ -1,11 +1,10 @@
-%-------------------------
-% Resume in Latex
-% Author : Gennadii Chursov
-% Based off of: https://github.com/sb2nov/resume and https://www.overleaf.com/latex/templates/jakes-resume/syzfjbzwjncs
-% License : MIT
+%------------------------
+% Resume Template
+% Author : Mohammad Abdullah Al Mamun
+% Github : https://github.com/Mamunia
 %------------------------
 
-\documentclass[letterpaper,11pt]{article}
+\documentclass[letterpaper,20pt]{article}
 
 \usepackage{latexsym}
 \usepackage[empty]{fullpage}
@@ -14,39 +13,27 @@
 \usepackage[usenames,dvipsnames]{color}
 \usepackage{verbatim}
 \usepackage{enumitem}
-\usepackage[hidelinks]{hyperref}
+\usepackage[pdftex]{hyperref}
 \usepackage{fancyhdr}
-\usepackage[english]{babel}
-\usepackage{tabularx}
-\input{glyphtounicode}
-
-
-%----------FONT OPTIONS----------
-% sans-serif
-% \usepackage[sfdefault]{FiraSans}
-% \usepackage[sfdefault]{roboto}
-% \usepackage[sfdefault]{noto-sans}
-% \usepackage[default]{sourcesanspro}
-
-% serif
-\usepackage{CormorantGaramond}
-% \usepackage{charter}
-
+\usepackage{multibib}
+\usepackage{etoolbox}
+\patchcmd{\thebibliography}{\section*{\refname}}{}{}{}
 
 \pagestyle{fancy}
 \fancyhf{} % clear all header and footer fields
-\fancyfoot{}
+%\fancyfoot{} %when no page numbering needed
+%\fancyfoot[C]{\thepage}
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0pt}
 
 % Adjust margins
-\addtolength{\oddsidemargin}{-0.5in}
-\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\oddsidemargin}{-0.530in}
+\addtolength{\evensidemargin}{-0.375in}
 \addtolength{\textwidth}{1in}
-\addtolength{\topmargin}{-.5in}
-\addtolength{\textheight}{1.0in}
+\addtolength{\topmargin}{-.45in}
+\addtolength{\textheight}{1in}
 
-\urlstyle{same}
+\urlstyle{rm}
 
 \raggedbottom
 \raggedright
@@ -54,63 +41,20 @@
 
 % Sections formatting
 \titleformat{\section}{
-  \vspace{-4pt}\scshape\raggedright\large
-}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+  \vspace{-10pt}\scshape\raggedright\large\color{black}
+}{}{0em}{}[\color{black}\titlerule \vspace{-6pt}]
 
-% Ensure that generate pdf is machine readable/ATS parsable
-\pdfgentounicode=1
-
-%-------------------------
 % Custom commands
-\newcommand{\resumeItem}[1]{
-  \item\small{
-    {#1 \vspace{-2pt}}
-  }
-}
+\renewcommand{\labelitemii}{$\circ$}
 
-\newcommand{\resumeSubheading}[4]{
-  \vspace{-2pt}\item
-    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
-      \textbf{#1} & #2 \\
-      \textit{\small#3} & \textit{\small #4} \\
-    \end{tabular*}\vspace{-7pt}
-}
 
-\newcommand{\resumeSubSubheading}[2]{
-    \item
-    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
-      \textit{\small#1} & \textit{\small #2} \\
-    \end{tabular*}\vspace{-7pt}
-}
 
-\newcommand{\resumeProjectHeading}[2]{
-    \item
-    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
-      \small#1 & #2 \\
-    \end{tabular*}\vspace{-7pt}
-}
-
-\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
-
-\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
-
-\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
-\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
-\newcommand{\resumeItemListStart}{\begin{itemize}}
-\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
-
-%-------------------------------------------
-%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
+%-----------------------------
+%%%%%%  CV STARTS HERE  %%%%%%
 
 \begin{document}
 
-%----------HEADING----------
-% \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
-%   \textbf{\href{http://sourabhbajaj.com/}{\Large Sourabh Bajaj}} & Email : \href{mailto:sourabh@sourabhbajaj.com}{sourabh@sourabhbajaj.com}\\
-%   \href{http://sourabhbajaj.com/}{http://www.sourabhbajaj.com} & Mobile : +1-123-456-7890 \\
-% \end{tabular*}
-
+%----------HEADING-----------------
 \begin{center}
     \textbf{\Huge \scshape Tai-Yu Chen} \\ \vspace{1pt}
     %\small \textit{unknown} \\
@@ -119,85 +63,121 @@
     \href{https://github.com/utahorange}{\underline{github.com/utahorange}}
 \end{center}
 
-%-----------Personal Statement----------
-\section*{Personal Statement}
-Driven and inquisitive individual, interested in computer hardware, software, and securing both.
+%\hrulefill
 
-%-----------PROGRAMMING SKILLS-----------
-\section{Technical Skills}
- \begin{itemize}[leftmargin=0.15in, label={}]
-    \small{\item{
-     \textbf{Languages}{: Powershell, Python, Java, Cisco IOS, \LaTeX} \\
-     %\textbf{Frameworks}{: Selenium/Selenide, Playwright, RestAssured, JUnit, TestNG, Cucumber} \\
-     \textbf{Developer Tools}{: Git, Vim} \\
-     %\textbf{Libraries}{: WireMock, Spring Cloud Contract, Pact, Chaos Monkey}
-    }}
- \end{itemize}
 
-%-----------EXPERIENCE-----------
-\section{Experience}
-  \resumeSubHeadingListStart
-
-        \resumeSubheading
-      {Team Captain, Networking and Windows OS Lead}{Aug 2020 - Present}
-      {Air Force Association CyberPatriot Competition}{Fullerton, CA}
-        \resumeItemListStart
-        \resumeItem{Placed 1st nationally out of over 5000 teams and 2nd in Cisco Networking Challenge.}
-        \resumeItem{Implemented full connectivity with VLAN, DHCP, NAT, OSPF, ACLs, ZBF, etc to satisfy client requirements.}
-        \resumeItem{Secured Cisco IOS devices by configuring a site-to-site VPN with the IPSec network protocol suite.}
-        \resumeItem{Maintained Windows services uptime in simulated engagement against active red team, completing business tasks promptly.}
-      \resumeItemListEnd
-    
-\resumeSubHeadingListEnd
-
-%-----------PROJECTS-----------
-% \section{Projects}
-%    \resumeSubHeadingListStart
-%      \resumeProjectHeading
-%          {\textbf{Gitlytics} $|$ \emph{Python, Flask, React, PostgreSQL, Docker}}{June 2020 -- Present}
-%          \resumeItemListStart
-%            \resumeItem{Developed a full-stack web application using with Flask serving a REST API with React as the frontend}
-%            \resumeItem{Implemented GitHub OAuth to get data from user’s repositories}
-%            \resumeItem{Visualized GitHub data to show collaboration}
-%            \resumeItem{Used Celery and Redis for asynchronous tasks}
-%          \resumeItemListEnd
-%      \resumeProjectHeading
-%          {\textbf{Simple Paintball} $|$ \emph{Spigot API, Java, Maven, TravisCI, Git}}{May 2018 -- May 2020}
-%          \resumeItemListStart
-%            \resumeItem{Developed a Minecraft server plugin to entertain kids during free time for a previous job}
-%            \resumeItem{Published plugin to websites gaining 2K+ downloads and an average 4.5/5-star review}
-%            \resumeItem{Implemented continuous delivery using TravisCI to build the plugin upon new a release}
-%            \resumeItem{Collaborated with Minecraft server administrators to suggest features and get feedback about the plugin}
-%          \resumeItemListEnd
-%    \resumeSubHeadingListEnd
-
-%-----------EDUCATION-----------
+%-----------EDUCATION-----------------
 \section{Education}
-  \resumeSubHeadingListStart
-    \resumeSubheading
-      {University of California, Los Angeles - Computer Science}{2024-2028}
-      {Some sort of scholar???}{Los Angeles California}
-  \resumeSubHeadingListEnd
-  \resumeSubHeadingListStart
-    \resumeSubheading
-      {Troy High School}{2020-2024}
-      {Troy Tech and IB Diploma Candidate, Computer Science Pathway}{Fullerton, CA}
-  \resumeSubHeadingListEnd
+    \begin{minipage}{.75\linewidth} \begin{flushleft}
+    		\textbf{Bangladesh University of Engineering and Technology (BUET)}
+    	\end{flushleft} \end{minipage}
+    \hfill 
+    \begin{minipage}{.20\linewidth}\begin{flushright}
+    	 Dhaka, Bangladesh
+    	\end{flushright}\end{minipage}
+    	
+    	\begin{minipage}{.75\linewidth} \begin{flushleft}
+    		M.Sc. in Glass and Ceramic Engineering;  CGPA: 3.75/4.0\\
+    	\end{flushleft} \end{minipage}
+    \hfill 
+    \begin{minipage}{.20\linewidth}\begin{flushright}
+    	 February 2020
+    	\end{flushright}\end{minipage} 
+	 Theis: Role of Oxygen Vacancies on Ferromagnetism in Oxide Dilute Magnetic Semiconductors: (CeO$_2$/TiO$_{2}$)\\
+	
+   		\begin{minipage}{.85\linewidth} \begin{flushleft}
+    		B.Sc. in Materials and Metallurgical Engineering;  CGPA: 3.54/4.0 (Last 4 semesters CGPA: 3.71/4.0)\\
+    	\end{flushleft} \end{minipage}
+    \hfill 
+    \begin{minipage}{.13\linewidth}\begin{flushright}
+    	 February 2017
+    	\end{flushright}\end{minipage}
+	 Theis: Hydrothermal Synthesis and Characterization of Pure and Doped BiVO$_{4}$ NPs\\
+	 \vspace{2pt}
+	  
+	  %\begin{minipage}{.75\linewidth} \begin{flushleft}
+    		%\textbf{Dhaka College}
+    	%\end{flushleft} \end{minipage}
+    %\hfill 
+   % \begin{minipage}{.20\linewidth}\begin{flushright}
+    	 %Dhaka, Bangladesh
+    	%\end{flushright}\end{minipage}
+    	 %\vspace{2pt}
+    	%\begin{minipage}{.75\linewidth} \begin{flushleft}
+    		%Higher Secondary Certificate Examination;  GPA: 5.0/5.0 (Placed $23^{th}$ in Merit list)\\
+    	%\end{flushleft} \end{minipage}
+    %\hfill 
+    %\begin{minipage}{.20\linewidth}\begin{flushright}
+    	 %July 2011
+    	%\end{flushright}\end{minipage}
 
-%-----------Certifications-----------
-\section{Certifications}
-  \begin{itemize}[leftmargin=0.15in, label={}]
-    \small{\item{
-     \textbf{CompTIA Security Plus} \\
-     \textit{Issued June 2023 - Expires June 2026} \\
-    }}
- \end{itemize}
-\begin{itemize}[leftmargin=0.15in, label={}]
-    \small{\item{
-     \textbf{Cisco Certified Network Associate} \\
-     \textit{Issued July 2023 - Expires July 2026} \\
-    }}
- \end{itemize}
+    	%\begin{minipage}{.75\linewidth} \begin{flushleft}
+    		%\textbf{Civil Aviation High School}
+    	%\end{flushleft} \end{minipage}
+    %\hfill 
+    %\begin{minipage}{.20\linewidth}\begin{flushright}
+    	 %Dhaka, Bangladesh
+    	%\end{flushright}\end{minipage}
+    	
+    	%\begin{minipage}{.75\linewidth} \begin{flushleft}
+    		%Secondary School Certificate Examination;  GPA: 5.0/5.0 (Placed $201^{th}$ in Merit list)\\
+    	%\end{flushleft} \end{minipage}
+    %\hfill 
+    %\begin{minipage}{.20\linewidth}\begin{flushright}
+    	 %May 2009
+    	%\end{flushright}\end{minipage}
+	 
+%-----------Research Interests-----------------	    
+\vspace{0pt}
+\section{Research Interests}
+	Emerging phenomena in 2D Materials, Complex Oxides and Organic-Inorganic Heterostructures; Advanced Spectroscopy Techniques, Synthesis, Growth $\&$ Fabrication of Flexible and Wearable Nanoelectronics Devices.\\
 
-%-------------------------------------------
+%-----------Awards-----------------
+\vspace{0pt}
+\section{Awards and Scholarships}
+	\begin{description}[font=$\bullet$]
+		\item{Best Oral Presentation, $2^{nd}$ Int. Conf. on Physics for Sustainable Development and Technology, 2017, Bangladesh.}
+		\vspace{-5pt}
+		\item {Dean's List Award, Faculty of Engineering for achieving $CGPA>3.75$ in Junior Year of B.Sc., 2016}
+		\vspace{-5pt}
+		\item {University Merit Scholarship for outstanding academic results in junior year of B.Sc., 2016}
+		\vspace{-5pt}
+		\item {$19^{th}$ at ACM – ICPC Semifinal ($9^{th}$ as ICPC Ranklist), Bangladesh Site, 2014.}
+		\vspace{-5pt}
+		\item {Honorable Mention, Inter University Programming Contest at Daffodil Uni., Bangladesh, 2014}
+		%\vspace{-5pt}
+		%\item {Government Merit Scholarship for outstanding academic results in higher secondary certificate examinations, 2012}
+		
+\end{description}
+
+%-----------Publications-----------------
+\vspace{-5pt}
+\section{Publications}
+	\nocite{*}
+	\bibliographystyle{unsrt}
+	\bibliography{publications}    % 'publications' is the name of a BibTeX file
+
+%-----------Research Experience-----------------
+\vspace{-5pt}
+\section{Research Experience}
+	\begin{description}[font=$\bullet$]
+		\item{Hands on experience in synthesis of multifunctional nanoparticles ($TiO_{2}$, $CeO_{2}$, $BiFeO_{3}$, $BiVO_{4}$) using solid state and different wet chemical routes such as sol-gel, hydrothermal, co-precipitation etc.}
+		\vspace{-5pt}
+		\item{Hands on experience in thin film deposition using spin coater ($TiO_{2}$ and $CeO_{2}$) and thermal evaporator (ZnSe).}
+		\vspace{-5pt}
+		\item{Material Characterization Analysis: X-Ray Diffraction (XRD), Scanning Electron Microscopy (SEM), Transmission Electron Microscopy (TEM), Selective Area Electron Diffraction (SAED), UV-Visible and Photoluminescence Spectroscopy, X-Ray Photoelectron Spectroscopy (XPS).}
+		\vspace{-5pt}
+		\item{Electrical and Magnetic Characterization Analysis: Dielectric Properties such as resistance, reactance, AC conductivity, AC resistivity; Ferroelectric Properties (P-E hysteresis); Magnetic Properties (M-H hysteresis).}
+		\vspace{-5pt}
+		
+	\end{description}
+	
+%-----------Technical Skills-----------------
+\vspace{-5pt}
+\section{Technical Skills}
+	Programming: C, C++, Python, \LaTeX; Scientific Computing Environment: MATLAB, Originpro.\\ 
+	
+
 \end{document}
+
+
